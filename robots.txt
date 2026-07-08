@@ -1,20 +1,64 @@
 # ====================================================================
-# VEL MARK DIGITAL CARE SOLUTIONS - ROBOTS.TXT CONFIGURATION
+# VEL MARK DIGITAL - ROBOTS.TXT CONFIGURATION
 # Optimized for 2026 Search-Ready Digital Systems & AI Discovery (AEO)
 # ====================================================================
 
 User-agent: *
 Allow: /
 
-# Directives for major AI/LLM Scrapers
-User-agent: GPTBot
+# --------------------------------------------------------------------
+# 1. AI SEARCH & ANSWER ENGINES (Crucial for AEO & Live Citations)
+# --------------------------------------------------------------------
+
+# OpenAI Search (Powers live web searches inside ChatGPT)
+User-agent: OAI-SearchBot
 Allow: /
 
+# OpenAI User-Initiated (Custom GPTs and live user links)
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity Indexer (Builds the Perplexity search index)
+User-agent: PerplexityBot
+Allow: /
+
+# Perplexity Live Browser (Fetches real-time answers for active users)
+User-agent: Perplexity-User
+Allow: /
+
+# Anthropic Claude Live Citation Bot
 User-agent: ClaudeBot
 Allow: /
 
+# Apple Siri & Spotlight AI Search
+User-agent: Applebot
+Allow: /
+
+# --------------------------------------------------------------------
+# 2. AI MODEL TRAINING BOTS (Pre-training Data Collection)
+# --------------------------------------------------------------------
+
+# Google Gemini Training Model Control Token
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI GPT Foundation Training Bot
+User-agent: GPTBot
+Allow: /
+
+# Anthropic Claude Foundation Training Bot
+User-agent: anthropic-ai
+Allow: /
+
+# Apple AI Model Training Bot
 User-agent: Applebot-Extended
 Allow: /
 
-# Sitemap Location (Replace with your verified domain)
-Sitemap: https://yourdomain.com/sitemap.xml
+# Meta Llama Model Crawler
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# --------------------------------------------------------------------
+# SITEMAP LOCATION
+# --------------------------------------------------------------------
+Sitemap: https://velmarkdigital.com.my/sitemap.xml
