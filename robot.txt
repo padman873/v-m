@@ -1,0 +1,20 @@
+# ====================================================================
+# VEL MARK DIGITAL CARE SOLUTIONS - ROBOTS.TXT CONFIGURATION
+# Optimized for 2026 Search-Ready Digital Systems & AI Discovery (AEO)
+# ====================================================================
+
+User-agent: *
+Allow: /
+
+# Directives for major AI/LLM Scrapers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap Location (Replace with your verified domain)
+Sitemap: https://yourdomain.com/sitemap.xml
