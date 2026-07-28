@@ -4,59 +4,78 @@
 # ====================================================================
 
 User-agent: *
+Content-Signal: search=yes,ai-train=no,use=reference
 Allow: /
 
 # --------------------------------------------------------------------
-# 1. AI SEARCH & ANSWER ENGINES (Crucial for AEO & Live Citations)
+# 1. PRIMARY SEARCH & STANDARD CRAWLERS
 # --------------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
 
-# OpenAI Search (Powers live web searches inside ChatGPT)
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+# --------------------------------------------------------------------
+# 2. LIVE AI SEARCH & ANSWER ENGINES (Crucial for AEO)
+# --------------------------------------------------------------------
+# OpenAI Search & Custom GPT Live Fetching
 User-agent: OAI-SearchBot
 Allow: /
 
-# OpenAI User-Initiated (Custom GPTs and live user links)
 User-agent: ChatGPT-User
 Allow: /
 
-# Perplexity Indexer (Builds the Perplexity search index)
+# Perplexity Indexing & Live Web Retrieval
 User-agent: PerplexityBot
 Allow: /
 
-# Perplexity Live Browser (Fetches real-time answers for active users)
 User-agent: Perplexity-User
 Allow: /
 
-# Anthropic Claude Live Citation Bot
-User-agent: ClaudeBot
+# Anthropic Live Citations
+User-agent: Claude-Web
 Allow: /
 
-# Apple Siri & Spotlight AI Search
+# Apple Search & Spotlight
 User-agent: Applebot
 Allow: /
 
 # --------------------------------------------------------------------
-# 2. AI MODEL TRAINING BOTS (Pre-training Data Collection)
+# 3. AI MODEL TRAINING BOTS (BLOCKED to align with ai-train=no)
 # --------------------------------------------------------------------
-
-# Google Gemini Training Model Control Token
-User-agent: Google-Extended
-Allow: /
-
-# OpenAI GPT Foundation Training Bot
 User-agent: GPTBot
-Allow: /
+Disallow: /
 
-# Anthropic Claude Foundation Training Bot
-User-agent: anthropic-ai
-Allow: /
+User-agent: ClaudeBot
+Disallow: /
 
-# Apple AI Model Training Bot
+User-agent: Google-Extended
+Disallow: /
+
 User-agent: Applebot-Extended
-Allow: /
+Disallow: /
 
-# Meta Llama Model Crawler
 User-agent: Meta-ExternalAgent
-Allow: /
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
 
 # --------------------------------------------------------------------
 # SITEMAP LOCATION
